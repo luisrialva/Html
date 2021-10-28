@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="physical.css" type="text/css">
+
+</head>
+
+
+<body>
+
+<h1>&nbsp;&nbsp;&nbsp;How Are You Feeling?</h1><br>
+<p class="move">&nbsp;&nbsp;&nbsp;On a scale of 1-10</p>
+<input id="scale" value="10" />
+<button id="scale" onclick="Scale()">Submit</button>
+<textarea id="journal" rows="10" cols="40"></textarea>
+<p class="feeling" id="feeling"></p>
+
+<script>
+function Scale() {
+  var scale, why;
+  scale = document.getElementById("scale").value;
+  why = (scale < 8) ? "Enter into your Journal why you feel this way and how to improve.":"Good, how can you keep this up?";
+  document.getElementById("feeling").innerHTML = why;
+}
+</script>
+
+<br>
+
+
+</body>
+</html>
